@@ -1,15 +1,7 @@
 import AWS from 'aws-sdk';
 let NAMES_DB = {};
 
-/*
-  IMPORTANT: remove 'https://' and '@connections' from the Connection URL that you copy over
-  example:
-    Connection URL https://xxxxxxxxxxx/execute-api.us-east-1.amazonaws.com/production/@connections
-  turns to:
-    ENDPOINT = 'xxxxxxxxxxx/execute-api.us-east-1.amazonaws.com/production/'
-  see minute 7:00 https://youtu.be/BcWD-M2PJ-8?t=420
-*/
-const ENDPOINT = '>>>ENTER_YOUR_ENDPOINT_HERE<<<';
+const ENDPOINT = 'izduk8fwqc.execute-api.ap-south-1.amazonaws.com/production/';
 const client = new AWS.ApiGatewayManagementApi({ endpoint: ENDPOINT });
 
 const sendToOne = async (id, body) => {
